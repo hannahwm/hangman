@@ -1,0 +1,475 @@
+
+
+@media screen and (min-width: 1000px) {
+	body {
+		// background: url("/interactive/2018/08/hangman/images/background.svg") repeat-y top center #fff;
+		// background-size: 1346px auto;
+
+	}
+
+	.article-topper--data-viz-white, .article-topper--simple-white {
+		background-color: transparent;
+	}
+
+	.nav__trigger-mod {
+		right: 50px;
+	}
+
+	.nav__width.nav--primary-list,
+	.simple_white_topper .nav__width {
+		background-color: #fff;
+		padding: 26px 50px;
+	}
+
+	.logged-in .article-nav, .logged-in .hidden-nav, .logged-in .nav--primary {
+		padding: 0;
+	}
+}
+
+.hangman-wrapper {
+	width: calc(100% + 40px);
+	margin-left: -20px;
+
+	@media screen and (min-width: 800px) {
+		max-width: 750px;
+		margin: 0 auto 100px;
+	}
+
+	> p {
+		margin: 0 20px 25px;
+
+		@media screen and (min-width: 800px) {
+			margin: 0 0 25px;
+		}
+	}
+
+	> img {
+		margin: 0 20px 25px;
+
+		@media screen and (min-width: 800px) {
+			margin: 0;
+		}
+	}
+
+	input {
+		padding: 0;
+		border: 0;
+		box-shadow: none;
+		background-color: #A4CE4E;
+		color: #fff;
+	}
+}
+
+
+.hangman-message {
+	height: 115px;
+	padding-top: 50px;
+	box-sizing: border-box;
+	text-align: center;
+	color: #000;
+	font-size: 1.25em;
+	font-weight: bold;
+	font-family: akkurat,sans-serif;
+
+	@media screen and (min-width: 500px) {
+		font-size: 1.5em;
+		height: 180px;
+	}
+
+	@media screen and (min-width: 800px) {
+		height: 200px;
+		padding-top: 100px;
+	}
+
+	&.visible {
+		opacity: 1;
+		transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s
+	}
+}
+
+.hangman-border {
+
+	position: relative;
+	@media screen and (min-width: 500px) {
+		border: 5px solid #000;
+		border-radius: 5px;
+		background-color: #FAFDFE;
+	}
+
+	> br,
+	> p {
+		display: none;
+	}
+}
+
+.difficulty {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+
+	> br,
+	> p {
+		display: none;
+	}
+
+	button {
+		display: block;
+		float: left;
+		padding: 4px 7px;
+		margin: 2px 6px 6px 0px;
+		background-color: #D22C20;
+		color: #fff;
+		border-radius: 3px;
+		border: 0;
+		text-decoration: none;
+		font-size: 12px;
+		font-family: akkurat,sans-serif;
+		box-sizing: border-box;
+		outline: none;
+		cursor: pointer;
+
+		&.selected {
+			background-color: #A81A16
+		}
+	}
+}
+
+.hangman-background {
+	background: url("/interactive/2018/08/hangman/images/amusement-park.svg") no-repeat bottom -50px right;
+	background-size: 200% auto;
+
+	@media screen and (min-width: 800px) {
+		background: url("/interactive/2018/08/hangman/images/amusement-park.svg") no-repeat bottom -165px center;
+		background-size: 115% auto;
+
+	}
+
+}
+
+.hangman-title {
+	width: 100%;
+	background-color: #FAFDFE;
+	color: #000;
+	text-align: center;
+	font-family: akkurat,sans-serif;
+	margin: 0;
+	padding: 15px 0 20px;
+}
+
+.hangman-image {
+	position: relative;
+	text-align: center;
+	margin-top: 20px;
+	padding-bottom: 15px;
+	box-sizing: border-box;
+	height: 265px;
+
+	@media screen and (min-width: 800px) {
+		margin-top: 50px;
+		height: 390px;
+	}
+
+	img {
+		position: relative;
+		width: 150px;
+		height: auto;
+		z-index: 1;
+
+		@media screen and (min-width: 800px) {
+			width: 224px;
+		}
+	}
+}
+
+.hangman-water-gif {
+	position: absolute;
+	z-index: 2;
+	top: 15px;
+	left: calc(50% + 16px);
+	height: 52px;
+	width: 20px;
+	// background-color: #ffff00;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	@media screen and (min-width: 800px) {
+		top: 35px;
+		left: calc(50% + 10px);
+	}
+}
+
+img.bucket {
+	display: block;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: calc(50% - 75px);
+
+	@media screen and (min-width: 800px) {
+		left: calc(50% - 112px);
+	}
+
+	&.hidden {
+		opacity: 0;
+	}
+}
+
+.hangman-form {
+	background-color: #A4CE4E;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.game-wrapper {
+	text-align: center;
+	background-color: #A4CE4E;
+	color: #fff;
+	padding: 10px 20px;
+	box-sizing: border-box;
+
+	@media screen and (min-width: 500px) {
+		padding: 20px;
+	}
+
+	@media screen and (min-width: 800px) {
+		padding: 50px 0 20px 0;
+	}
+
+	~ p {
+		margin: 0;
+		line-height: 0;
+	}
+}
+
+.question {
+	margin: 0 0 10px 0;
+	width: 100%;
+	max-width: 500px;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+	background-color: #A4CE4E;
+	color: #fff;
+	font-family: "akkurat", sans-serif;
+
+	@media screen and (min-width: 500px) {
+		margin: 0 0 35px 0;
+		font-size: 1.25em;
+	}
+
+	@media screen and (min-width: 800px) {
+		margin: 0 auto 35px;
+	}
+}
+
+.word {
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Ubuntu Mono', monospace;
+
+	@media screen and (min-width: 800px) {
+		width: 100%;
+		margin: 20px auto;
+	}
+
+	input {
+		width: 100%;
+		letter-spacing: 5px;
+		padding: 0 10px;
+		font-size: 1.25em;
+		text-align: center;
+		font-family: inherit;
+	}
+}
+
+.letters {
+	width: 100%;
+	margin: 20px auto;
+
+	@media screen and (min-width: 400px) {
+		width: 300px;
+	}
+
+	@media screen and (min-width: 500px) {
+		width: 350px;
+	}
+
+	@media screen and (min-width: 800px) {
+		width: 500px;
+		margin: 0 auto 40px;
+	}
+
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		clear: both;
+	}
+
+	> br {
+		display: none;
+	}
+
+	a {
+		display: block;
+		float: left;
+		width: 31px;
+		padding: 4px 7px;
+		margin: 2px 6px 6px 0px;
+		background-color: #D22C20;
+		color: #fff;
+		border-radius: 3px;
+		text-decoration: none;
+		font-size: 19px;
+		font-family: akkurat,sans-serif;
+		box-sizing: border-box;
+
+		@media screen and (min-width: 800px) {
+			width: 31px;
+			padding: 4px 7px;
+			margin: 2px 6px 10px 0px;
+		}
+
+		&.disabled {
+			background-color: #ccc;
+			color: #999;
+		}
+		&.highlight {
+			background-color: #7B9931;
+		}
+	}
+}
+
+.hangman-controls {
+	margin: 0;
+	a {
+		color: #fff;
+	}
+}
+
+.hangman-share {
+	display: none;
+	position: fixed;
+	z-index: 5;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+
+	&:before {
+		position: fixed;
+		z-index: 9998;
+		top: 0;
+		left: 0;
+		display: block;
+		content: "";
+		background-color: rgba(0,0,0,0.3);
+		width: 100vw;
+		height: 100vh;
+	}
+
+	&.visible {
+		display: block;
+	}
+}
+
+.hangman-share-content {
+	position: absolute;
+	z-index: 9999;
+	width: calc(100% - 20px);
+	height: 250px;
+	top: calc(50% - 125px);
+	left: 10px;
+	padding: 40px 20px 20px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	border: 1px solid #000;
+
+	@media screen and (min-width: 800px) {
+		width: 600px;
+		height: 480px;
+		top: calc(50% - 240px);
+		left: calc(50% - 300px);
+	}
+
+	> p {
+		line-height: 0;
+		font-size: 0;
+		margin: 0;
+	}
+
+	h3 {
+		font-family: "akkurat",sans-serif;
+		font-size: 24px;
+	}
+
+	.article-topper__social-list {
+		position: relative;
+	}
+
+	.article-topper__social-item {
+		 padding: 20px 15px;
+		 height: 60px;
+		 box-sizing: border-box;
+		 display: inline-block;
+	}
+
+	.article-topper__social-link {
+		text-indent: 0;
+		display: block;
+		width: auto;
+		overflow: hidden;
+		padding: 0 15px 0 40px;
+		margin-right: 20px;
+		background-position: center left 10px;
+		color: #fff;
+		text-decoration: none;
+		height: 60px;
+		line-height: 60px;
+		background-color: #D22C20;
+		box-sizing: border-box;
+	}
+
+	.hangman-share__portrait {
+		display: block;
+		width: 150px;
+		margin: 20px auto;
+	}
+
+}
+
+.hangman-share__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 30px;
+	width: 30px;
+	border: 0;
+	text-indent: -9999px;
+	background: url("/interactive/2018/08/hangman/images/close-red.svg") no-repeat center;
+	outline: none;
+}
+
+.hangman-share__reset {
+	height: 15px;
+	border: 0;
+	margin-top: 30px;
+	background: url("/interactive/2018/08/hangman/images/reset-red.svg") no-repeat bottom right;
+	background-size: 15px;
+	outline: none;
+	color: #D22C20;
+	padding-right: 23px;
+	font-size: 16px;
+	line-height: 13px;
+}
