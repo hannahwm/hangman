@@ -72,7 +72,15 @@ document.game.displayWord.value = display_word;
     }
 
     $(".hangman-message").addClass("visible").html("Congratulations! You won.");
-    $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait.svg");
+
+    if ( difficulty === "hard" ) {
+      $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait-woman.svg");
+    } else if ( difficulty === "medium" ) {
+      $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait.svg");
+    } else {
+      $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait-paws.svg");
+    }
+
 
     setTimeout(function() {
       $(".hangman-share").fadeIn();
@@ -90,7 +98,14 @@ document.game.displayWord.value = display_word;
       // lost
       $(".hangman-message").addClass("visible").html("Oh no! You lost.");
 
-      $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait-lost.svg");
+      if ( difficulty === "hard" ) {
+        $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait-woman-lost.svg");
+      } else if ( difficulty === "medium" ) {
+        $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait-lost.svg");
+      } else {
+        $(".hangman-share__portrait").attr("src", "/interactive/2018/08/hangman/images/portrait-paws-lost.svg");
+      }
+
       $(".bucket").addClass("hidden");
 
       setTimeout(function() {
@@ -110,7 +125,7 @@ document.game.displayWord.value = display_word;
 
       setTimeout( function() {
         waterDiv.attr("src", placeholdImg.src);
-      }, 5000);
+      }, 2000);
 
     }
 

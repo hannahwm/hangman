@@ -1,87 +1,94 @@
 <html>
+
 <head>
-<title>Hangman</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link type="text/css" rel="stylesheet" href="css/styles.min.css"/>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.min.js"></script>
+    <title>Hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/styles.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
 
 </head>
 
 <body>
 
-<div class="hangman-wrapper">
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu cursus eros. Etiam imperdiet eros sit amet venenatis luctus. Curabitur accumsan ornare commodo. Integer vitae odio vel magna tincidunt malesuada posuere et lacus. Donec eget mi eu velit elementum varius.</p>
+    <div class="hangman-wrapper">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu cursus eros. Etiam imperdiet eros sit amet venenatis luctus. Curabitur accumsan ornare commodo. Integer vitae odio vel magna tincidunt malesuada posuere et lacus. Donec eget mi
+            eu velit elementum varius.</p>
 
-	<img src="/interactive/2018/08/hangman/images/welcome-back.svg" />
+        <img src="/interactive/2018/08/hangman/images/welcome-back.svg" />
 
-	<div class="hangman-border">
-		<!-- <h2 class="hangman-title">See if you can answer these back to school questions</h2> -->
-		<div class="difficulty">
-			<button class="difficulty-level selected" id="easy">Easy</button>
-			<button class="difficulty-level" id="medium">Medium</button>
-			<button class="difficulty-level" id="hard">Hard</button>
-		</div>
-		<div class="hangman-share">
-			<div class="hangman-share-content">
-				<button class="hangman-share__close">close</button>
-				<h3>Share it!</h3>
-				<ul class="article-topper__social-list js-share-tools">
-			    <li class="article-topper__social-item article-topper__social-item--twitter ">
-			      <a class="article-topper__social-link article-topper__social-link--twitter qs-link" data-qs-service="twitter" data-qs-url="https://huskynunews.wpengine.com/?p=82336" data-qs-title="Beat the heat at Northeastern (hangman edition)" href="javascript:window.open('https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Furl%3Dhttps%253A%252F%252Fhuskynunews.wpengine.com%252F%253Fp%253D82336%26text%3DBeat%2520the%2520heat%2520at%2520Northeastern%2520%2528hangman%2520edition%2529','myTwitterWin','width=620,height=350'); void(0)">Twitter</a>
-			    </li>
-			    <li class="article-topper__social-item article-topper__social-item--facebook ">
+        <div class="hangman-border">
+            <div class="difficulty">
+                <button class="difficulty-level selected" id="easy">Easy</button>
+                <button class="difficulty-level" id="medium">Medium</button>
+                <button class="difficulty-level" id="hard">Hard</button>
+            </div>
+            <div class="hangman-share">
+                <div class="hangman-share-content">
+                    <button class="hangman-share__close">close</button>
+                    <h3>Share it!</h3>
+                    <ul class="article-topper__social-list js-share-tools">
+                        <li class="article-topper__social-item article-topper__social-item--twitter ">
+                            <a class="article-topper__social-link article-topper__social-link--twitter qs-link" data-qs-service="twitter" data-qs-url="https://huskynunews.wpengine.com/?p=82336" data-qs-title="Beat the heat at Northeastern (hangman edition)" href="javascript:window.open('https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Furl%3Dhttps%253A%252F%252Fhuskynunews.wpengine.com%252F%253Fp%253D82336%26text%3DBeat%2520the%2520heat%2520at%2520Northeastern%2520%2528hangman%2520edition%2529','myTwitterWin','width=620,height=350'); void(0)">Twitter</a>
+                        </li>
+                        <li class="article-topper__social-item article-topper__social-item--facebook ">
 
-						<a class="article-topper__social-link article-topper__social-link--facebook qs-link" data-qs-service="facebook-share" data-qs-url="https://huskynunews.wpengine.com/?p=82336" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhuskynunews.wpengine.com%2F%3Fp%3D82336','myFacebookWin','width=620,height=350'); void(0)">Facebook</a>
-			    </li>
-			  </ul>
-				<img class="hangman-share__portrait" src="/interactive/2018/08/hangman/images/portrait.svg" />
-				<button class="hangman-share__reset">Play again</button>
-			</div>
-		</div>
-		<div class="hangman-background"><div class="hangman-message" id="hmMessage">How well do you know Northeastern?</div><div class="hangman-image"><div class="hangman-water-gif"><img src="/interactive/2018/08/hangman/images/water-placeholder.png" /></div><img src="/interactive/2018/08/hangman/images/paws-start.svg" height="350" width="224" name="hm"><img class="bucket" src="/interactive/2018/08/hangman/images/bucket.svg" height="350" width="224"/></div></div>
+                            <a class="article-topper__social-link article-topper__social-link--facebook qs-link" data-qs-service="facebook-share" data-qs-url="https://huskynunews.wpengine.com/?p=82336" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhuskynunews.wpengine.com%2F%3Fp%3D82336','myFacebookWin','width=620,height=350'); void(0)">Facebook</a>
+                        </li>
+                    </ul>
+                    <img class="hangman-share__portrait" src="/interactive/2018/08/hangman/images/portrait.svg" />
+                    <button class="hangman-share__reset">Play again</button>
+                </div>
+            </div>
+            <div class="hangman-background">
+                <div class="hangman-message" id="hmMessage">How well do you know Northeastern?</div>
+                <div class="hangman-image">
+                    <div class="hangman-water-gif"><img src="/interactive/2018/08/hangman/images/water-placeholder.png" /></div><img src="/interactive/2018/08/hangman/images/paws-start.svg" height="350" width="224" name="hm"><img class="bucket" src="/interactive/2018/08/hangman/images/bucket.svg"
+                        height="350" width="224" /></div>
+            </div>
 
-		<div class="game-wrapper">
-			<form class="hangman-form" name="game">
-				<p class="question"><input type="text" name="question"></p>
-			<p class="word"><input type="text" name="displayWord"></p>
-			<p class="used-letters"><input type="text" name="usedLetters"></p>
-			</form>
+            <div class="game-wrapper">
+                <form class="hangman-form" name="game">
+                    <p class="question"><input type="text" name="question"></p>
+                    <p class="word"><input type="text" name="displayWord"></p>
+                    <p class="used-letters"><input type="text" name="usedLetters"></p>
+                </form>
 
-			<p class="letters">
-				<a class="A" href="javascript:selectLetter('A');">A</a>
-				<a class="B" href="javascript:selectLetter('B');">B</a>
-				<a class="C" href="javascript:selectLetter('C');">C</a>
-				<a class="D" href="javascript:selectLetter('D');">D</a>
-				<a class="E" href="javascript:selectLetter('E');">E</a>
-				<a class="F" href="javascript:selectLetter('F');">F</a>
-				<a class="G" href="javascript:selectLetter('G');">G</a>
-				<a class="H" href="javascript:selectLetter('H');">H</a>
-				<a class="I" href="javascript:selectLetter('I');">I</a>
-				<a class="J" href="javascript:selectLetter('J');">J</a>
-				<a class="K" href="javascript:selectLetter('K');">K</a>
-				<a class="L" href="javascript:selectLetter('L');">L</a>
-				<a class="M" href="javascript:selectLetter('M');">M</a>
-				<a class="N" href="javascript:selectLetter('N');">N</a>
-				<a class="O" href="javascript:selectLetter('O');">O</a>
-				<a class="P" href="javascript:selectLetter('P');">P</a>
-				<a class="Q" href="javascript:selectLetter('Q');">Q</a>
-				<a class="R" href="javascript:selectLetter('R');">R</a>
-				<a class="S" href="javascript:selectLetter('S');">S</a>
-				<a class="T" href="javascript:selectLetter('T');">T</a>
-				<a class="U" href="javascript:selectLetter('U');">U</a>
-				<a class="V" href="javascript:selectLetter('V');">V</a>
-				<a class="W" href="javascript:selectLetter('W');">W</a>
-				<a class="X" href="javascript:selectLetter('X');">X</a>
-				<a class="Y" href="javascript:selectLetter('Y');">Y</a>
-				<a class="Z" href="javascript:selectLetter('Z');">Z</a>
-			</p>
+                <p class="letters">
+                    <a class="A" href="javascript:selectLetter('A');">A</a>
+                    <a class="B" href="javascript:selectLetter('B');">B</a>
+                    <a class="C" href="javascript:selectLetter('C');">C</a>
+                    <a class="D" href="javascript:selectLetter('D');">D</a>
+                    <a class="E" href="javascript:selectLetter('E');">E</a>
+                    <a class="F" href="javascript:selectLetter('F');">F</a>
+                    <a class="G" href="javascript:selectLetter('G');">G</a>
+                    <a class="H" href="javascript:selectLetter('H');">H</a>
+                    <a class="I" href="javascript:selectLetter('I');">I</a>
+                    <a class="J" href="javascript:selectLetter('J');">J</a>
+                    <a class="K" href="javascript:selectLetter('K');">K</a>
+                    <a class="L" href="javascript:selectLetter('L');">L</a>
+                    <a class="M" href="javascript:selectLetter('M');">M</a>
+                    <a class="N" href="javascript:selectLetter('N');">N</a>
+                    <a class="O" href="javascript:selectLetter('O');">O</a>
+                    <a class="P" href="javascript:selectLetter('P');">P</a>
+                    <a class="Q" href="javascript:selectLetter('Q');">Q</a>
+                    <a class="R" href="javascript:selectLetter('R');">R</a>
+                    <a class="S" href="javascript:selectLetter('S');">S</a>
+                    <a class="T" href="javascript:selectLetter('T');">T</a>
+                    <a class="U" href="javascript:selectLetter('U');">U</a>
+                    <a class="V" href="javascript:selectLetter('V');">V</a>
+                    <a class="W" href="javascript:selectLetter('W');">W</a>
+                    <a class="X" href="javascript:selectLetter('X');">X</a>
+                    <a class="Y" href="javascript:selectLetter('Y');">Y</a>
+                    <a class="Z" href="javascript:selectLetter('Z');">Z</a>
+                </p>
 
-			<p class="hangman-controls"><a href="javascript:reset()">Reset game</a></p>
-		</div>
-	</div>
-</div>
+                <p class="hangman-controls"><a href="javascript:reset()">Reset game</a></p>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
