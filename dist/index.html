@@ -13,10 +13,9 @@
 <body>
 
     <div class="hangman-wrapper">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu cursus eros. Etiam imperdiet eros sit amet venenatis luctus. Curabitur accumsan ornare commodo. Integer vitae odio vel magna tincidunt malesuada posuere et lacus. Donec eget mi
-            eu velit elementum varius.</p>
+        <p>Who’s Northeastern’s seventh president? What’s Northeastern’s motto? Where are Northeastern’s regional campuses located? Test your knowledge of Northeastern with this trivia game.</p>
 
-        <img src="/interactive/2018/08/hangman/images/welcome-back.svg" />
+        <img src="/interactive/2018/09/dunktank/images/welcome-back.svg" />
 
         <div class="hangman-border">
             <div class="difficulty">
@@ -30,28 +29,29 @@
                     <h3>Share it!</h3>
                     <ul class="article-topper__social-list js-share-tools">
                         <li class="article-topper__social-item article-topper__social-item--twitter ">
-                            <a class="article-topper__social-link article-topper__social-link--twitter qs-link" data-qs-service="twitter" data-qs-url="https://huskynunews.wpengine.com/?p=82336" data-qs-title="Beat the heat at Northeastern (hangman edition)" href="javascript:window.open('https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Furl%3Dhttps%253A%252F%252Fhuskynunews.wpengine.com%252F%253Fp%253D82336%26text%3DBeat%2520the%2520heat%2520at%2520Northeastern%2520%2528hangman%2520edition%2529','myTwitterWin','width=620,height=350'); void(0)">Twitter</a>
+                            <a class="article-topper__social-link article-topper__social-link--twitter qs-link" data-qs-service="twitter" data-qs-url="https://news.northeastern.edu/?p=86013" data-qs-title="How well do you know Northeastern? Test your knowledge with this interactive game."
+                                href="javascript:window.open('https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Furl%3Dhttps%253A%252F%252Fnews.northeastern.edu%252F%253Fp%253D86013%26text%3DHow%2520well%2520do%2520you%2520know%2520Northeastern%253F%2520Test%2520your%2520knowledge%2520with%2520this%2520interactive%2520game.','myTwitterWin','width=620,height=350'); void(0)">Twitter</a>
                         </li>
                         <li class="article-topper__social-item article-topper__social-item--facebook ">
-
-                            <a class="article-topper__social-link article-topper__social-link--facebook qs-link" data-qs-service="facebook-share" data-qs-url="https://huskynunews.wpengine.com/?p=82336" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhuskynunews.wpengine.com%2F%3Fp%3D82336','myFacebookWin','width=620,height=350'); void(0)">Facebook</a>
+                            <a class="article-topper__social-link article-topper__social-link--facebook qs-link" data-qs-service="facebook-share" data-qs-url="https://news.northeastern.edu/?p=86013" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnews.northeastern.edu%2F%3Fp%3D86013','myFacebookWin','width=620,height=350'); void(0)">Facebook</a>
                         </li>
                     </ul>
-                    <img class="hangman-share__portrait" src="/interactive/2018/08/hangman/images/portrait.svg" />
+                    <img class="hangman-share__portrait" src="/interactive/2018/09/dunktank/images/portrait.svg" />
                     <button class="hangman-share__reset">Play again</button>
                 </div>
             </div>
             <div class="hangman-background">
                 <div class="hangman-message" id="hmMessage">How well do you know Northeastern?</div>
                 <div class="hangman-image">
-                    <div class="hangman-water-gif"><img src="/interactive/2018/08/hangman/images/water-placeholder.png" /></div><img src="/interactive/2018/08/hangman/images/paws-start.svg" height="350" width="224" name="hm"><img class="bucket" src="/interactive/2018/08/hangman/images/bucket.svg"
+                    <div class="hangman-water-gif"><img src="/interactive/2018/09/dunktank/images/water-placeholder.png" /></div><img src="/interactive/2018/09/dunktank/images/paws-start.svg" height="350" width="224" name="hm"><img class="bucket" src="/interactive/2018/09/dunktank/images/bucket.svg"
                         height="350" width="224" /></div>
             </div>
 
             <div class="game-wrapper">
+                <div class="counter">0/5</div>
                 <form class="hangman-form" name="game">
                     <p class="question"><input type="text" name="question"></p>
-                    <p class="word"><input type="text" name="displayWord"></p>
+                    <p class="word"><textarea name="displayWord"></textarea></p>
                     <p class="used-letters"><input type="text" name="usedLetters"></p>
                 </form>
 
@@ -84,7 +84,7 @@
                     <a class="Z" href="javascript:selectLetter('Z');">Z</a>
                 </p>
 
-                <p class="hangman-controls"><a href="javascript:reset()">Reset game</a></p>
+                <button class="hangman-reset">Reset game</button>
             </div>
         </div>
     </div>

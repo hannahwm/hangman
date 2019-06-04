@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
   .pipe(cache(imagemin()))
-  .pipe(gulp.dest('dist/interactive/2018/08/hangman/images'))
+  .pipe(gulp.dest('dist/interactive/2018/09/dunktank/images'))
   .pipe(browserSync.reload({
     stream: true
   }))
